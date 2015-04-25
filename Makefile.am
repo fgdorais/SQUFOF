@@ -17,5 +17,5 @@
 
 SUBDIRS = lib src
 
-EXTRA_DIST = AUTHORS COPYING INSTALL README \
-		install-sh missing
+EXTRA_DIST = COPYING README.md
+
