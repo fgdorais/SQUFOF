@@ -54,10 +54,10 @@ int time_test () {
 
       if (x != f * g) {
 	rv++;
-	printf("ERROR %"PRIu64", %"PRIu64"\n", x, f);
+	printf("ERROR %"PRIu64", %"PRIu64", %"PRIu64"\n", x, f, g);
       }
 
-      x = A*x + B;
+      x = (A*x + B) & UINT64_C(0x7FFFFFFFFFFFFFFF);
     }
 
   printf ("TIME %f\nERRS %d\n", (timing() - t_start), rv);
